@@ -36,11 +36,13 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-    deploy-dev: 
-
+  deploy-dev: 
+     name: Deploy Desenvolvimento
      runs-on: ubuntu-lastest
+     environment: dev
+     needs: [build]
      steps: 
-
-     -name: Teste
-     run: echo 'Deploy Dev'
-     sye´s
+     
+     - name: Teste
+       run: echo 'Deploy Dev'
+     
